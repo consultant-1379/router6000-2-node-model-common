@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- ******************************************************************************* 
+    * COPYRIGHT Ericsson LMI 2016. All rights reserved. * * No part of this document
+    may be reproduced in any form without the * written permission of the copyright 
+    owner.The contents of this document * are subject to revision without notice 
+    due to continued progress in * methodology, design and manufacturing. Ericsson 
+    shall have no liability * for any error or damage of any kind resulting from 
+    the use of this document. * ******************************************************************************* -->
+<CapabilitySupportDefinition oc:ns="Router6000-2"
+                             oc:name="BulkNodeCLI" oc:version="1.0.0"
+                             xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                             xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common">
+
+    <oc:modelCreationInfo author="Quarks" creationDate="07-07-2023">
+        <oc:designedModel componentId="Router6000-2 common"/>
+    </oc:modelCreationInfo>
+
+    <oc:desc>
+        Contains Bulk-Node-CLI-related capabilities for Router6000-2 node
+    </oc:desc>
+
+    <complexCapability name="bulkNodeCLI">
+        <value xsi:type="oc:mapValue">
+            <oc:mapEntries>
+                <oc:mapEntry>
+                    <oc:key xsi:type="oc:stringValue" value="configurationUpload"/>
+                    <oc:value xsi:type="oc:booleanValue" value="true"/>
+                </oc:mapEntry>
+                <oc:mapEntry>
+                    <oc:key xsi:type="oc:stringValue" value="configurationUploadTimeout"/>
+                    <oc:value xsi:type="oc:integerValue" value="90"/>
+                </oc:mapEntry>
+                <oc:mapEntry>
+                    <oc:key xsi:type="oc:stringValue" value="commandTimeout"/>
+                    <oc:value xsi:type="oc:integerValue" value="15"/>
+                </oc:mapEntry>
+            </oc:mapEntries>
+        </value>
+    </complexCapability>
+</CapabilitySupportDefinition>

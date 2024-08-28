@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CapabilitySupportDefinition
+    oss_common:ns="Router6000-2"
+    oss_common:name="STATISTICAL_SubscriptionAttributes"
+    oss_common:version="1.0.0"
+    oss_common:lifeCycle="CURRENT"
+    xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+    xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <oss_common:modelCreationInfo author="pmic" creationDate="18/08/2023">
+    <oss_common:designedModel componentId="router6000-2-node-model-common"/>
+  </oss_common:modelCreationInfo>
+
+  <oss_common:desc>PM Subscription level Capability support for Router6000-2 node target type</oss_common:desc>
+
+  <complexCapability name="supportedRopPeriods">
+    <value xsi:type="oss_common:collectionValue">
+      <oss_common:values>
+        <oss_common:value xsi:type="oss_common:stringValue" value="ONE_MIN" />
+        <oss_common:value xsi:type="oss_common:stringValue" value="FIVE_MIN" />
+        <oss_common:value xsi:type="oss_common:stringValue" value="FIFTEEN_MIN"/>
+        <oss_common:value xsi:type="oss_common:stringValue" value="THIRTY_MIN" />
+        <oss_common:value xsi:type="oss_common:stringValue" value="ONE_HOUR" />
+        <oss_common:value xsi:type="oss_common:stringValue" value="TWELVE_HOUR" />
+        <oss_common:value xsi:type="oss_common:stringValue" value="ONE_DAY"/>
+      </oss_common:values>
+    </value>
+  </complexCapability>
+
+  <complexCapability name="supportedRopRange">
+    <value xsi:type="oss_common:collectionValue">
+      <oss_common:values>
+        <oss_common:value xsi:type="oss_common:stringValue" value="FIFTEEN_MIN"/>
+        <oss_common:value xsi:type="oss_common:stringValue" value="ONE_DAY"/>
+      </oss_common:values>
+    </value>
+  </complexCapability>
+
+  <complexCapability name="supportedRopsForMeasurementGroup">
+    <value xsi:type="oss_common:collectionValue">
+      <oss_common:values>
+        <oss_common:value xsi:type="oss_common:mapValue">
+          <oss_common:mapEntries>
+            <oss_common:mapEntry>
+              <oss_common:key xsi:type="oss_common:stringValue" value="twamp"/>
+              <oss_common:value xsi:type="oss_common:collectionValue">
+                <oss_common:values>
+                  <oss_common:value xsi:type="oss_common:stringValue" value="FIFTEEN_MIN"/>
+                </oss_common:values>
+              </oss_common:value>
+            </oss_common:mapEntry>
+          </oss_common:mapEntries>
+        </oss_common:value>
+      </oss_common:values>
+    </value>
+  </complexCapability>
+
+  <complexCapability name="groupsNotAllowedInMultipleSubscriptions">
+    <value xsi:type="oss_common:collectionValue">
+      <oss_common:values>
+        <oss_common:value xsi:type="oss_common:stringValue" value="twamp"/>
+      </oss_common:values>
+    </value>
+  </complexCapability>
+
+  <complexCapability name="supportedOtherNodeTypes">
+    <value xsi:type="oss_common:collectionValue">
+      <oss_common:values>
+        <oss_common:value xsi:type="oss_common:stringValue" value="Router6672"/>
+	    <oss_common:value xsi:type="oss_common:stringValue" value="Router6675"/>
+        <oss_common:value xsi:type="oss_common:stringValue" value="Router6274"/>
+        <oss_common:value xsi:type="oss_common:stringValue" value="Router6x71"/>
+        <oss_common:value xsi:type="oss_common:stringValue" value="Router6273"/>
+		<oss_common:value xsi:type="oss_common:stringValue" value="Router6673"/>
+		<oss_common:value xsi:type="oss_common:stringValue" value="Router6000-2"/>
+      </oss_common:values>
+    </value>
+  </complexCapability>
+
+</CapabilitySupportDefinition>

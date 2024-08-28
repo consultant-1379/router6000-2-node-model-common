@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oss_capabilitysupport:CapabilitySupportDefinition
+    oss_common:ns="Router6000-2" oss_common:name="ned-common"
+    oss_common:version="1.0.0"
+    xmlns:oss_capabilitysupport="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+    xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+    xmlns:oss_capability="urn:com:ericsson:schema:xml:oss:oss_capability"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <oss_common:modelCreationInfo author="Quarks"
+        creationDate="18/08/2023">
+        <oss_common:designedModel componentId="router6000-2-node-model-common-jar" />
+    </oss_common:modelCreationInfo>
+
+    <oss_common:desc>Capability Support model for common node-related
+        capabilities for node type Router6000-2
+    </oss_common:desc>
+
+    <oss_capabilitysupport:capability
+        name="licenseKey" value="FAT1023440" />
+
+    <oss_capabilitysupport:capability 
+        name="requiresMeContext" value="true"/>
+
+    <oss_capabilitysupport:capability
+        name="supportsAutomaticTreatAs" value="false" />
+    <oss_capabilitysupport:capability 
+        name="hasReliableProductVersion" value="false" />
+    <oss_capabilitysupport:capability
+        name="fcmAlarmEnabled" value="true"/>
+    <oss_capabilitysupport:complexCapability name="fcmAppliedLogic">
+        <oss_capabilitysupport:value xsi:type="oss_common:stringValue" value="COMPARE_PRODUCTDATA" />
+    </oss_capabilitysupport:complexCapability>
+</oss_capabilitysupport:CapabilitySupportDefinition>

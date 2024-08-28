@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilitySupportDefinition xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+                             xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common"
+                             oc:ns="NODE:Router6000-2" oc:name="UpgradeIndependence" oc:version="1.0.0">
+
+    <oc:modelCreationInfo author="Quarks" creationDate="18/08/2023">
+        <oc:designedModel componentId="Upgrade Independence Capability Support"/>
+    </oc:modelCreationInfo>
+
+    <oc:desc>Upgrade Independence Capability Support for Router6000-2 node type</oc:desc>
+    <capability name="Supported" value="true"/>
+</CapabilitySupportDefinition>

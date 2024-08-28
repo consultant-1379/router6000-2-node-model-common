@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CapabilitySupportDefinition oss_common:ns="Router6000-2"
+                             oss_common:name="NE-DISCOVERY" oss_common:version="1.0.0"
+                             oss_common:lifeCycle="CURRENT"
+                             xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+                             xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <oss_common:modelCreationInfo author="Quarks" creationDate="2023-06-12">
+        <oss_common:designedModel componentId="Ne Discovery Capabilities" />
+    </oss_common:modelCreationInfo>
+
+    <oss_common:desc>Capability Support for Router6000-2 node target type</oss_common:desc>
+
+    <complexCapability name="sysOID">
+        <value xsi:type="oss_common:collectionValue">
+            <oss_common:values>
+                <oss_common:value xsi:type="oss_common:stringValue" value=".1.3.6.1.4.1.193.218.1.47" />
+		<oss_common:value xsi:type="oss_common:stringValue" value=".1.3.6.1.4.1.193.218.1.48" />
+                <oss_common:value xsi:type="oss_common:stringValue" value=".1.3.6.1.4.1.193.218.1.45" />
+	    </oss_common:values>
+        </value>
+    </complexCapability>
+
+</CapabilitySupportDefinition>

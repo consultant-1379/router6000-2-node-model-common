@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *******************************************************************************
+    * COPYRIGHT Ericsson LMI 2018. All rights reserved.
+    * No part of this document may be reproduced in any form without the
+    * written permission of the copyright owner. The contents of this document
+    * are subject to revision without notice due to continued progress in
+    * methodology, design and manufacturing. Ericsson shall have no liability
+    * for any error or damage of any kind resulting from the use of this document.
+    ********************************************************************************* -->
+<CapabilitySupportDefinition
+        xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+        xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        oc:ns="NODE:Router6000-2"
+        oc:name="NetworkModelRetriever"
+        oc:version="1.0.0">
+
+    <oc:modelCreationInfo author="Quarks" creationDate="2023-08-18">
+        <oc:designedModel componentId="Network Model Retriever Capability Support"/>
+    </oc:modelCreationInfo>
+
+    <oc:desc>Network Model Retriever Capability Support for Router6000-2 node target type</oc:desc>
+
+    <complexCapability name="plugins">
+        <value xsi:type="oc:collectionValue">
+            <oc:values>
+                <oc:value xsi:type="oc:stringValue" value="COM_ECIM_MIMRETRIEVER"/>
+                <oc:value xsi:type="oc:stringValue" value="COM_ECIM_PMCOUNTER_RETRIEVER"/>
+                <oc:value xsi:type="oc:stringValue" value="YANG_MIMRETRIEVER"/>
+            </oc:values>
+        </value>
+    </complexCapability>
+
+    <complexCapability name="transformers">
+        <value xsi:type="oc:collectionValue">
+            <oc:values>
+                <oc:value xsi:type="oc:stringValue" value="MomXmlTransformer"/>
+                <oc:value xsi:type="oc:stringValue" value="MibTransformer"/>
+                <oc:value xsi:type="oc:stringValue" value="YangTransformer2"/>
+            </oc:values>
+        </value>
+    </complexCapability>
+
+    <complexCapability name="transformerProperties">
+        <value xsi:type="oc:mapValue">
+            <oc:mapEntries>
+                <oc:mapEntry>
+                    <oc:key xsi:type="oc:stringValue" value="momXmlTransformer.skipOssEdtCombinedModelGeneration"/>
+                    <oc:value xsi:type="oc:stringValue" value="true"/>
+                </oc:mapEntry>
+                <oc:mapEntry>
+                    <oc:key xsi:type="oc:stringValue" value="yangTransformer.markNPContainerAsSystemCreated"/>
+                    <oc:value xsi:type="oc:stringValue" value="false"/>
+                </oc:mapEntry>
+            </oc:mapEntries>
+        </value>
+    </complexCapability>
+
+</CapabilitySupportDefinition>

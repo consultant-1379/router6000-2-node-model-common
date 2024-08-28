@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- *******************************************************************************
+    * COPYRIGHT Ericsson LMI 2018. All rights reserved.
+    * No part of this document may be reproduced in any form without the
+    * written permission of the copyright owner. The contents of this document
+    * are subject to revision without notice due to continued progress in
+    * methodology, design and manufacturing. Ericsson shall have no liability
+    * for any error or damage of any kind resulting from the use of this document.
+    ********************************************************************************* -->
+<CapabilitySupportDefinition
+    oss_common:ns="Router6000-2"
+    oss_common:name="PMICFunctions"
+    oss_common:version="1.0.0"
+    oss_common:lifeCycle="CURRENT"
+    xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+    xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <oss_common:modelCreationInfo author="Quarks" creationDate="07/07/2023">
+        <oss_common:designedModel componentId="PM Capability Support" />
+    </oss_common:modelCreationInfo>
+
+    <oss_common:desc>PM Capability Support for Router6000-2 node target type</oss_common:desc>
+
+    <capability name="mediationAutonomyEnabled" value="true" />
+
+    <complexCapability name="supportedSubscriptionTypes">
+        <value xsi:type="oss_common:collectionValue">
+          <oss_common:values>
+            <oss_common:value xsi:type="oss_common:stringValue" value="STATISTICAL" />
+          </oss_common:values>
+        </value>
+    </complexCapability>
+    <complexCapability name="supportedRopPeriod">
+        <value xsi:type="oss_common:collectionValue">
+          <oss_common:values>
+              <oss_common:value xsi:type="oss_common:mapValue">
+                  <oss_common:mapEntries>
+                      <oss_common:mapEntry>
+                          <oss_common:key xsi:type="oss_common:stringValue" value="STATISTICAL" />
+                          <oss_common:value xsi:type="oss_common:collectionValue">
+                              <oss_common:values>
+                                  <oss_common:value xsi:type="oss_common:stringValue" value="FIFTEEN_MIN" />
+                                  <oss_common:value xsi:type="oss_common:stringValue" value="ONE_DAY" />
+                              </oss_common:values>
+                          </oss_common:value>
+                      </oss_common:mapEntry>
+                  </oss_common:mapEntries>
+              </oss_common:value>
+          </oss_common:values>
+        </value>
+    </complexCapability>
+	<complexCapability name="supportedRopsForMeasurementGroup">
+        <value xsi:type="oss_common:mapValue">
+           <oss_common:mapEntries>
+              <oss_common:mapEntry>
+                 <oss_common:key xsi:type="oss_common:stringValue" value="STATISTICAL" />
+				    <oss_common:value xsi:type="oss_common:mapValue">
+                       <oss_common:mapEntries>
+                           <oss_common:mapEntry>
+                               <oss_common:key xsi:type="oss_common:stringValue" value="twamp" />
+                                   <oss_common:value xsi:type="oss_common:collectionValue">
+                                      <oss_common:values>
+                                         <oss_common:value xsi:type="oss_common:stringValue" value="FIFTEEN_MIN" />
+                                      </oss_common:values>
+                                    </oss_common:value>
+                           </oss_common:mapEntry>
+                       </oss_common:mapEntries>
+                    </oss_common:value>
+               </oss_common:mapEntry>
+           </oss_common:mapEntries>
+        </value>
+    </complexCapability>
+	<complexCapability name="groupsNotAllowedInMultipleSubscriptions">
+       <value xsi:type="oss_common:mapValue">
+          <oss_common:mapEntries>
+	          <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="STATISTICAL" />
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="twamp"/>
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+           </oss_common:mapEntries>
+       </value>
+    </complexCapability>
+</CapabilitySupportDefinition>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyPerformanceIndicatorFormula
+    xmlns="urn:com:ericsson:schema:xml:oss:kpi_formula" xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+    oss_common:ns="Router6000-2" oss_common:lifeCycle="CURRENT"
+    oss_common:name="Ethernet_Ingress_Broadcast_Frames">
+    <oss_common:modelCreationInfo
+        creationDate="2023-08-18" author="Ericsson">
+        <oss_common:designedModel componentId="router6000-2-node-model-common-jar" />
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>
+        This KPI provides an indication of the ratio of ingress broadcast frames of an Ethernet interface
+    </oss_common:desc>
+    <formula>
+        <reportingObjectType name="tdm1001-Ethernet-port-history" />
+        <computationInput scope="OBJECTS_FOR_TARGET">
+            <objectType name="tdm1001-Ethernet-port-history" ns="ComTop" />
+        </computationInput>
+        <computation>
+            <iterate varName="theRO">
+                <iterationSet>
+                    <var varName="INPUT" />
+                </iterationSet>
+                <output>
+                    <outputInstructions>
+                        <reportingObjectIdentity>
+                            <identityOf varName="theRO" />
+                        </reportingObjectIdentity>
+                    </outputInstructions>
+                    <multiply>
+                        <literal>100.0</literal>
+                        <divide>
+                            <pi on="theRO" piName="bcast_inpackets" />
+                            <pi on="theRO" piName="inpackets" />
+                        </divide>
+                    </multiply>
+                </output>
+            </iterate>
+        </computation>
+    </formula>
+</KeyPerformanceIndicatorFormula>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oss_capabilitysupport:CapabilitySupportDefinition
+        oss_common:name="NSCS"
+        oss_common:ns="NODE:Router6000-2"
+        oss_common:version="1.0.0"
+        xmlns:oss_capabilitysupport="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+        xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <oss_common:modelCreationInfo
+            author="Quarks"
+            creationDate="2023-08-18">
+        <oss_common:designedModel componentId="router6000-2-node-model-common" />
+    </oss_common:modelCreationInfo>
+
+    <oss_common:desc>NSCS Capability Support for Node Type Router6000-2.</oss_common:desc>
+
+    <oss_capabilitysupport:complexCapability name="supportedCertificateTypes">
+        <oss_capabilitysupport:value xsi:type="oss_common:collectionValue">
+            <oss_common:values>
+                <oss_common:value xsi:type="oss_common:stringValue" value="OAM"/>
+            </oss_common:values>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+    <oss_capabilitysupport:complexCapability name="defaultEntityProfiles">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="OAM"/>
+                    <oss_common:value xsi:type="oss_common:stringValue" value="DUSGen2OAM_CHAIN_EP"/>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+    <oss_capabilitysupport:complexCapability name="enrollmentCAAuthorizationModes">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="OAM"/>
+                    <oss_common:value xsi:type="oss_common:stringValue" value="ENROLLMENT_ROOT_CA_CERTIFICATE"/>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+    <oss_capabilitysupport:complexCapability name="crlCheckSupportedCertificateTypes">
+        <oss_capabilitysupport:value xsi:type="oss_common:collectionValue">
+            <oss_common:values>
+                <oss_common:value xsi:type="oss_common:stringValue" value="OAM"/>
+            </oss_common:values>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+</oss_capabilitysupport:CapabilitySupportDefinition>

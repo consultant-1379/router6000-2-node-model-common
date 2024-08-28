@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pte:PrimaryTypeExtensionDefinition xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+                                    xmlns:pte="urn:com:ericsson:schema:xml:oss:dps_primarytype_ext"
+                                    oss_common:ns="TCIM"
+                                    oss_common:name="Router60002_Lldpv2localsystemdata_Extension" oss_common:version="1.0.0">
+    <oss_common:modelCreationInfo author="Quarks" creationDate="2023-06-21">
+        <oss_common:designedModel componentId="Lldpv2localsystemdata"/>
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>This extension model will make use of  Lldpv2localsystemdata model and provide an extension of the Primary
+        Type ( and some attributes) behaviors.
+        TCIM provides this model extension for receiving creation/delete/modify events
+    </oss_common:desc>
+     <oss_common:extendedModelElement urn="//urn%3ardns%3acom%3aericsson%3aoammodel%3aericsson-lldp-state-router6000/lldp-v2-loc-port-entry/*"/>
+
+    <pte:primaryTypeAttributeExtension attrName="lldp-v2-loc-port-desc">
+        <pte:changeEventHandling onCreatePo="VALUE" onDeletePo="VALUE" />
+    </pte:primaryTypeAttributeExtension>
+   <pte:primaryTypeAttributeExtension attrName="lldp-v2-loc-port-id">
+        <pte:changeEventHandling onCreatePo="VALUE" onDeletePo="VALUE" />
+    </pte:primaryTypeAttributeExtension>
+  <pte:primaryTypeAttributeExtension attrName="lldp-v2-loc-port-if-index">
+        <pte:changeEventHandling onCreatePo="VALUE" onDeletePo="VALUE" />
+    </pte:primaryTypeAttributeExtension>
+  </pte:PrimaryTypeExtensionDefinition>

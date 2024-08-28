@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyPerformanceIndicatorFormula xmlns="urn:com:ericsson:schema:xml:oss:kpi_formula" xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+    oss_common:ns="Router6000-2" oss_common:lifeCycle="CURRENT" oss_common:name="PTP_Average_Path_Delay">
+    <oss_common:modelCreationInfo creationDate="2023-08-18" author="Ericsson">
+        <oss_common:designedModel componentId="router6000-2-node-model-common-jar" />
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>
+        This KPI provides an indication of the average path delay for the PTP port
+    </oss_common:desc>
+    <formula>
+        <reportingObjectType name="ptp" />
+        <computationInput scope="OBJECTS_FOR_TARGET">
+            <objectType name="ptp" ns="ComTop" />
+        </computationInput>
+        <computation>
+            <iterate varName="theRO">
+                <iterationSet>
+                    <var varName="INPUT" />
+                </iterationSet>
+                <output>
+                    <outputInstructions>
+                        <reportingObjectIdentity>
+                            <identityOf varName="theRO" />
+                        </reportingObjectIdentity>
+                    </outputInstructions>
+                    <pi on="theRO" piName="averageMeanPathDelay"/>
+                </output>
+            </iterate>
+        </computation>
+    </formula>
+</KeyPerformanceIndicatorFormula>

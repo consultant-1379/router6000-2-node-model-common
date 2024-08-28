@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oss_capabilitysupport:CapabilitySupportDefinition
+    oss_common:ns="Router6000-2" oss_common:name="SHM_JOB"
+    oss_common:version="1.0.0" oss_common:lifeCycle="CURRENT"
+    xmlns:oss_capabilitysupport="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+    xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+    xmlns:oss_capability="urn:com:ericsson:schema:xml:oss:oss_capability"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <oss_common:modelCreationInfo author="Quarks"
+        creationDate="2023-08-18 14:00:00.00">
+        <oss_common:designedModel componentId="shm-models-model" />
+    </oss_common:modelCreationInfo>
+
+    <oss_common:desc>SHM Capability Support for BackupDomain
+        corresponding to Network Element of type Router6000-2.
+    </oss_common:desc>
+
+    <oss_capabilitysupport:capability
+        name="BackupDomain" value="System" />
+    <oss_capabilitysupport:capability
+        name="BackupType" value="Configuration" />
+
+</oss_capabilitysupport:CapabilitySupportDefinition>

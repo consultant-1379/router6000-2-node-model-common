@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyPerformanceIndicatorFormula xmlns="urn:com:ericsson:schema:xml:oss:kpi_formula" xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+                                oss_common:ns="Router6000-2" oss_common:lifeCycle="CURRENT" oss_common:name="Ethernet_Interface_Ingress_Discard">
+    <oss_common:modelCreationInfo creationDate="2023-08-18" author="Ericsson">
+        <oss_common:designedModel componentId="router6000-2-node-model-common-jar" />
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>
+        This KPI provides the number of ingress discarded frames of an Ethernet interface.
+    </oss_common:desc>
+    <formula>
+        <reportingObjectType name="port-history"/>
+        <computationInput scope="OBJECTS_FOR_TARGET">
+            <objectType name="port-history" ns="ComTop"/>
+        </computationInput>
+        <computation>
+            <iterate varName="theRO">
+                <iterationSet>
+                    <var varName="INPUT"/>
+                </iterationSet>
+                <output>
+                    <outputInstructions>
+                        <reportingObjectIdentity>
+                            <identityOf varName="theRO"/>
+                        </reportingObjectIdentity>
+                    </outputInstructions>
+                    <add>
+                        <pi on="theRO" piName="policing_class0_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class1_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class2_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class3_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class4_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class5_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class6_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class7_violate_drop_packets"/>
+                    </add>
+                </output>
+            </iterate>
+        </computation>
+    </formula>
+    <formula>
+        <reportingObjectType name="link-group-history"/>
+        <computationInput scope="OBJECTS_FOR_TARGET">
+            <objectType name="link-group-history" ns="ComTop"/>
+        </computationInput>
+        <computation>
+            <iterate varName="theRO">
+                <iterationSet>
+                    <var varName="INPUT"/>
+                </iterationSet>
+                <output>
+                    <outputInstructions>
+                        <reportingObjectIdentity>
+                            <identityOf varName="theRO"/>
+                        </reportingObjectIdentity>
+                    </outputInstructions>
+                    <add>
+                        <pi on="theRO" piName="policing_class0_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class1_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class2_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class3_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class4_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class5_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class6_violate_drop_packets"/>
+                        <pi on="theRO" piName="policing_class7_violate_drop_packets"/>
+                    </add>
+                </output>
+            </iterate>
+        </computation>
+    </formula>
+</KeyPerformanceIndicatorFormula>

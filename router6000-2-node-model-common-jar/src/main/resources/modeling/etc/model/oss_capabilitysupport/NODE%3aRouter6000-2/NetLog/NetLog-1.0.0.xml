@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *******************************************************************************
+* COPYRIGHT Ericsson LMI 2017. All rights reserved. * * No part of this document
+may be reproduced in any form without the * written permission of the copyright
+owner.The contents of this document * are subject to revision without notice
+due to continued progress in * methodology, design and manufacturing. Ericsson
+shall have no liability * for any error or damage of any kind resulting from
+the use of this document.
+* ******************************************************************************* -->
+<CapabilitySupportDefinition
+	oc:ns="NODE:Router6000-2"
+	oc:name="NetLog"
+	oc:version="1.0.0"
+	xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common">
+
+	<oc:modelCreationInfo author="Quarks" creationDate="18th August 2023">
+		<oc:designedModel componentId="router6000-2-node-model-common-jar" />
+	</oc:modelCreationInfo>
+
+	<oc:desc>Contains Network Log related capabilities for Router6000-2 node</oc:desc>
+	<!-- Mirror model is not supported on Router6000-2 nodes, setting value to false -->
+	<capability name="supportsModel" value="false" />
+
+	<!-- List of log types supported on Router6676 nodes  -->
+	<complexCapability name="NetlogSupportedLogTypes">
+		<value xsi:type="oc:collectionValue">
+			<oc:values>
+				<oc:value xsi:type="oc:mapValue">
+					<oc:mapEntries>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="logType" />
+							<oc:value xsi:type="oc:stringValue" value="system_logs" />
+						</oc:mapEntry>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="logPath" />
+							<oc:value xsi:type="oc:stringValue" value="/var/log/" />
+						</oc:mapEntry>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="patternMatch" />
+							<oc:value xsi:type="oc:stringValue" value="false" />
+						</oc:mapEntry>
+					</oc:mapEntries>
+				</oc:value>
+				<oc:value xsi:type="oc:mapValue">
+					<oc:mapEntries>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="logType" />
+							<oc:value xsi:type="oc:stringValue" value="tech_log" />
+						</oc:mapEntry>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="logPath" />
+							<oc:value xsi:type="oc:stringValue" value="/md" />
+						</oc:mapEntry>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="patternMatch" />
+							<oc:value xsi:type="oc:stringValue" value="false" />
+						</oc:mapEntry>
+					</oc:mapEntries>
+				</oc:value>
+				<oc:value xsi:type="oc:mapValue">
+					<oc:mapEntries>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="logType" />
+							<oc:value xsi:type="oc:stringValue" value="isp" />
+						</oc:mapEntry>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="logPath" />
+							<oc:value xsi:type="oc:stringValue" value="/flash/" />
+						</oc:mapEntry>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="patternMatch" />
+							<oc:value xsi:type="oc:stringValue" value="false" />
+						</oc:mapEntry>
+					</oc:mapEntries>
+				</oc:value>
+				<oc:value xsi:type="oc:mapValue">
+					<oc:mapEntries>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="logType" />
+							<oc:value xsi:type="oc:stringValue" value="pod" />
+						</oc:mapEntry>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="logPath" />
+							<oc:value xsi:type="oc:stringValue" value="/flash/diags/pod/" />
+						</oc:mapEntry>
+						<oc:mapEntry>
+							<oc:key xsi:type="oc:stringValue" value="patternMatch" />
+							<oc:value xsi:type="oc:stringValue" value="false" />
+						</oc:mapEntry>
+					</oc:mapEntries>
+				</oc:value>
+			</oc:values>
+		</value>
+	</complexCapability>
+</CapabilitySupportDefinition>

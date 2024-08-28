@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pte:PrimaryTypeExtensionDefinition xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+                                    xmlns:pte="urn:com:ericsson:schema:xml:oss:dps_primarytype_ext"
+                                    oss_common:ns="TCIM"
+                                    oss_common:name="Router60002_System_Extension" oss_common:version="1.0.0">
+    <oss_common:modelCreationInfo author="Blackbox" creationDate="21-06-2023">
+        <oss_common:designedModel componentId="system"/>
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>This extension model will make use of Ethernet model and provide an extension of the Primary
+        Type ( and some attributes) behaviors.
+        TCIM provides this model extension for receiving creation/delete/modify events
+    </oss_common:desc>
+    <oss_common:extendedModelElement urn="//urn%3ardns%3acom%3aericsson%3aoammodel%3aericsson-contexts-router6000/system/*"/>
+
+    <pte:primaryTypeAttributeExtension attrName="hostname">
+         <pte:changeEventHandling onCreatePo="VALUE" onModifyAttr="VALUE PRIOR_VALUE" onDeletePo="VALUE" />
+    </pte:primaryTypeAttributeExtension>
+
+</pte:PrimaryTypeExtensionDefinition>

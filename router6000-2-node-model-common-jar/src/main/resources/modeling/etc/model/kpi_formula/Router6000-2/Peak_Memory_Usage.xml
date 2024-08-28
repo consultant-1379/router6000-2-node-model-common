@@ -1,0 +1,40 @@
+<KeyPerformanceIndicatorFormula
+        xmlns="urn:com:ericsson:schema:xml:oss:kpi_formula"
+        xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+        oss_common:ns="Router6000-2" oss_common:lifeCycle="CURRENT"
+        oss_common:name="Peak_Memory_Usage">
+    <oss_common:modelCreationInfo
+            creationDate="2023-08-18" author="Ericsson">
+        <oss_common:designedModel componentId="router6000-2-node-model-common-jar"/>
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>
+        This KPI provides an indication of the peak memory usage in percentage for the Network Element.
+    </oss_common:desc>
+    <formula>
+        <reportingObjectType name="global"/>
+        <computationInput scope="OBJECTS_FOR_TARGET">
+            <objectType name="global" ns="ComTop"/>
+        </computationInput>
+        <computation>
+            <iterate varName="theRO">
+                <iterationSet>
+                    <var varName="INPUT"/>
+                </iterationSet>
+                <output>
+                    <outputInstructions>
+                        <reportingObjectIdentity>
+                            <identityOf varName="theRO"/>
+                        </reportingObjectIdentity>
+                    </outputInstructions>
+                    <multiply>
+                        <literal>100</literal>
+                        <divide>
+                            <pi on="theRO" piName="peak_user_mem"/>
+                            <pi on="theRO" piName="total_user_mem"/>
+                        </divide>
+                    </multiply>
+                </output>
+            </iterate>
+        </computation>
+    </formula>
+</KeyPerformanceIndicatorFormula>

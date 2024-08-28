@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilitySupportDefinition
+        xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+        xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        oss_common:ns="NODE:Router6000-2"
+        oss_common:name="TransportCim"
+        oss_common:version="1.0.0">
+ 
+    <oss_common:modelCreationInfo author="Quarks" creationDate="2023-08-18">
+        <oss_common:designedModel componentId="Transport CIM Capabilities"/>
+    </oss_common:modelCreationInfo>
+ 
+    <oss_common:desc>Transport CIM Capability Support for Router6000-2 node target type</oss_common:desc>
+ 
+    <capability name="NormalizedModelSupported" value="true" />
+ 
+    <capability name="LinkGroupConfigurationSupported" value="true" />
+ 
+    <capability name="IsLinkSdnApplicable" value="true"/>
+ 
+    <complexCapability name="NormalizedClassMapping">
+        <value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="interfaces" />
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="Interfaces" />
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="interfaces$$interface" />
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="Interface" />
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="ethernet" />
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="Ethernet" />
+                            <oss_common:value xsi:type="oss_common:stringValue" value="$plugin"/>
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="link-group"/>
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="LinkGroup#1"/>
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="auto-negotiate"/>
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="NOT_DEFINED"/>
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                   <oss_common:key xsi:type="oss_common:stringValue" value="system"/>
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="NOT_DEFINED"/>
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="bind-interface"/>
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="NOT_DEFINED"/>
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="Tdm1001PdhPort"/>
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="$plugin"/>
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="lldp"/>
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="$plugin" />
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="lldp-v2-loc-port-entry"/>
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="$plugin"/>
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="lldp-v2-rem-entry"/>
+                    <oss_common:value xsi:type="oss_common:collectionValue">
+                        <oss_common:values>
+                            <oss_common:value xsi:type="oss_common:stringValue" value="$plugin"/>
+                        </oss_common:values>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </value>
+    </complexCapability>
+ 
+    <complexCapability name="NormalizedAttributeMapping">
+        <value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="interfaces$$interface" />
+                    <oss_common:value xsi:type="oss_common:mapValue">
+                        <oss_common:mapEntries>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="description" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="Interface.description" />
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="enabled" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="Interface.enabled" />
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="name" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="Interface.name" />
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="type" />
+                                <oss_common:value xsi:type="oss_common:mapValue">
+                                    <oss_common:mapEntries>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="ds1" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="Interface.type" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="sonet" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="Interface.type" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="ieee8023adLag" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="Interface.type" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="radioLinkTerminal" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="Interface.type" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="carrierTermination" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="Interface.type" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="ethernetCsmacd" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="Interface.type $IFONVALUE.type=ethernetCsmacd" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="ieee8023adLag"/>
+                                            <oss_common:value xsi:type="oss_common:stringValue"
+                                                              value="Interface.type $IFONVALUE.type=ieee8023adLag"/>
+                                        </oss_common:mapEntry>
+                                    </oss_common:mapEntries>
+                                </oss_common:value>
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="$IFONVALUE.type=ethernetCsmacd"/>
+                                <oss_common:value xsi:type="oss_common:mapValue">
+                                    <oss_common:mapEntries>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="link-type"/>
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="NOT_AVAILABLE"/>
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="higher-layer-if"/>
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="null"/>
+                                        </oss_common:mapEntry>
+                                    </oss_common:mapEntries>
+                                </oss_common:value>
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="$IFONVALUE.type=ieee8023adLag"/>
+                                <oss_common:value xsi:type="oss_common:mapValue">
+                                    <oss_common:mapEntries>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="link-type"/>
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="AGGREGATION"/>
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="layer-rate"/>
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="LINK_AGGREGATION"/>
+                                        </oss_common:mapEntry>
+                                    </oss_common:mapEntries>
+                                </oss_common:value>
+                            </oss_common:mapEntry>
+                        </oss_common:mapEntries>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="ethernet" />
+                    <oss_common:value xsi:type="oss_common:mapValue">
+                        <oss_common:mapEntries>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="port-type"/>
+                                <oss_common:value xsi:type="oss_common:mapValue">
+                                    <oss_common:mapEntries>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="$ENUMMAPPING" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="Interface.layer-rate" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="1ge" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="ETHERNET_1Gb" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="10ge" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="ETHERNET_10Gb" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="25ge"/>
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="ETHERNET_25Gb"/>
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="25ge-qsa"/>
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="ETHERNET_25Gb"/>
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="40ge" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="ETHERNET_40Gb" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="100ge" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="ETHERNET_100Gb" />
+                                        </oss_common:mapEntry>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="400ge" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="ETHERNET_400Gb" />
+                                        </oss_common:mapEntry>
+                                    </oss_common:mapEntries>
+                                </oss_common:value>
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="encapsulation-dot1q"/>
+                                <oss_common:value xsi:type="oss_common:stringValue" value="$NOMAPPING" />
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="ethernet-key"/>
+                                <oss_common:value xsi:type="oss_common:stringValue" value="$NOMAPPING" />
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="link-group" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="Ethernet.link-group" />
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="mtu" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="Ethernet.mtu" />
+                            </oss_common:mapEntry>
+                        </oss_common:mapEntries>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="auto-negotiate" />
+                    <oss_common:value xsi:type="oss_common:mapValue">
+                        <oss_common:mapEntries>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="auto-negotiate-key" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="$NOMAPPING" />
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="force" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="$NOMAPPING" />
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="flc" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="$NOMAPPING" />
+                            </oss_common:mapEntry>
+                            <!--<oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="speed" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="$NOMAPPING" />
+                            </oss_common:mapEntry>-->
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="auto-negotiate-enable" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="Ethernet.auto-negotiate" />
+                            </oss_common:mapEntry>
+                        </oss_common:mapEntries>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="bind-interface"/>
+                    <oss_common:value xsi:type="oss_common:mapValue">
+                        <oss_common:mapEntries>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="intf-name" />
+                                <oss_common:value xsi:type="oss_common:mapValue">
+                                    <oss_common:mapEntries>
+                                        <oss_common:mapEntry>
+                                            <oss_common:key xsi:type="oss_common:stringValue" value="$GETFDN" />
+                                            <oss_common:value xsi:type="oss_common:stringValue" value="Interface.lower-layer-if" />
+                                        </oss_common:mapEntry>
+                                    </oss_common:mapEntries>
+                                </oss_common:value>
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="intf-ctx" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="$NOMAPPING" />
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="bind-interface-key" />
+                                <oss_common:value xsi:type="oss_common:stringValue" value="$NOMAPPING" />
+                            </oss_common:mapEntry>
+                        </oss_common:mapEntries>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="link-group"/>
+                    <oss_common:value xsi:type="oss_common:mapValue">
+                        <oss_common:mapEntries>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="link-group-key"/>
+                                <oss_common:value xsi:type="oss_common:stringValue" value="LinkGroup.linkGroup-id"/>
+                            </oss_common:mapEntry>
+                        </oss_common:mapEntries>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </value>
+    </complexCapability>
+ 
+    <complexCapability name="NormalizeDefaultAttribute">
+        <value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries> <!-- structure ready for expansions -->
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="Interface"/>
+                    <oss_common:value xsi:type="oss_common:mapValue">
+                        <oss_common:mapEntries>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="link-tp"/>
+                                <oss_common:value xsi:type="oss_common:stringValue" value="null"/>
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="alarm-status"/>
+                                <oss_common:value xsi:type="oss_common:stringValue" value="UNKNOWN"/>
+                            </oss_common:mapEntry>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="node-if-name"/>
+                                <oss_common:value xsi:type="oss_common:stringValue" value="Interface.$GETFDN"/>
+                            </oss_common:mapEntry>
+                        </oss_common:mapEntries>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="Ethernet"/>
+                    <oss_common:value xsi:type="oss_common:mapValue">
+                        <oss_common:mapEntries>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="duplex"/>
+                                <oss_common:value xsi:type="oss_common:stringValue" value="FULL"/>
+                            </oss_common:mapEntry>
+                        </oss_common:mapEntries>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="LinkGroup"/>
+                    <oss_common:value xsi:type="oss_common:mapValue">
+                        <oss_common:mapEntries>
+                            <oss_common:mapEntry>
+                                <oss_common:key xsi:type="oss_common:stringValue" value="bonding-mode"/>
+                                <oss_common:value xsi:type="oss_common:stringValue" value="ACTIVE_BACKUP"/>
+                            </oss_common:mapEntry>
+                        </oss_common:mapEntries>
+                    </oss_common:value>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </value>
+    </complexCapability>
+</CapabilitySupportDefinition>

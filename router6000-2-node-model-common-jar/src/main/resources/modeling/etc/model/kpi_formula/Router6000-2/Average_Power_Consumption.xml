@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyPerformanceIndicatorFormula
+        xmlns="urn:com:ericsson:schema:xml:oss:kpi_formula"
+        xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+        oss_common:ns="Router6000-2" oss_common:lifeCycle="CURRENT"
+        oss_common:name="Average_Power_Consumption">
+    <oss_common:modelCreationInfo
+            creationDate="2023-08-18" author="Ericsson">
+        <oss_common:designedModel componentId="router6000-2-node-model-common-jar"/>
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>
+        This KPI provides an indication of the average power consumption during each granularity period.
+    </oss_common:desc>
+    <formula>
+    <reportingObjectType name="energy-meter"/>
+    <computationInput scope="OBJECTS_FOR_TARGET">
+      <objectType name="energy-meter" ns="ComTop"/>
+    </computationInput>
+    <computation>
+      <iterate varName="theRO">
+        <iterationSet>
+          <var varName="INPUT"/>
+        </iterationSet>
+        <iterate varName="theROIndex">
+          <iterationSet>
+            <pi extract="INDICES" on="theRO" piName="pmPowerConsumption"/>
+          </iterationSet>
+          <output>
+            <outputInstructions>
+              <reportingObjectIdentity>
+                <identityOf varName="theRO"/>
+              </reportingObjectIdentity>
+              <customKeyValuePair keyName="theROIndex" varName="theROIndex"/>
+            </outputInstructions>
+            <pi index="theROIndex" on="theRO" piName="pmPowerConsumption"/>
+          </output>
+        </iterate>
+      </iterate>
+    </computation>
+  </formula>
+</KeyPerformanceIndicatorFormula>

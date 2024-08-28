@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilitySupportDefinition oc:ns="Router6000-2" oc:name="ENIQ_INTEGRATION" oc:version="1.0.0"
+  xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport" xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport oss_capabilitysupport.xsd">
+
+  <oc:modelCreationInfo author="quarks" creationDate="2023-07-07">
+    <oc:designedModel componentId="ENIQ Integration capabilitySupport"/>
+  </oc:modelCreationInfo>
+  <oc:desc>ENIQ-ENM Integration capabilitySupport - IPRouter6000</oc:desc>
+
+  <capability name="FILTER_NAMESPACE" value="EniqTopologyService"/>
+
+  <capability name="FILTER_NAME" value="ENIQ_ROUTER_6000_2"/>
+
+  <capability name="FILTER_VERSION" value=""/>
+
+  <capability name="PRE_PROCESSOR" value="SpecialCaseIpRouter6000"/>
+
+  <capability name="MIM_NAME" value="ComTop"/>
+
+  <capability name="OUTPUT_DIRECTORY" value="coreTopology"/>
+
+  <capability name="OUTPUT_FILENAME" value="${ManagedElement.fdn}.xml"/>
+
+  <capability name="ENIQ_EVENTS_SUPPORTED" value="false"/>
+
+  <!-- Removing Symlink creation for Topology files
+
+  <capability name="ENIQ_EVENTS_SYMLINK_DIRECTORY" value="core/topologyData/CoreNetwork/"/>
+
+  <capability name="ENIQ_EVENTS_SYMLINK_TARGET_PREFIX" value="coreTopology/"/>
+
+  <capability name="ENIQ_EVENTS_SYMLINK_FILE_NAME" value=""/>
+
+  <capability name="ENIQ_STATS_SYMLINK_DIRECTORY" value="core/topologyData/CoreNetwork,transport/topologyData/Router6k/"/>
+
+  <capability name="ENIQ_STATS_SYMLINK_TARGET_PREFIX" value="coreTopology"/>
+
+  <capability name="ENIQ_STATS_SYMLINK_FILE_NAME" value=""/> -->
+
+  <capability name="ENIQ_STATS_SUPPORTED" value="false"/>
+
+  <capability name="TECHNOLOGY_TYPE" value="TRANSPORT"/>
+
+  <capability name="ROUTER6000_PLATFORM" value="true"/>
+
+  <capability name="TRANSPORT_ASCII_EXPORT_DIRECTORY" value="transport/topologyData/twamp/twampSessionConfig"/>
+
+  <capability name="ROUTER6K_ASCII_FILE_NAME" value=",ManagedElement=1"/>
+
+</CapabilitySupportDefinition>

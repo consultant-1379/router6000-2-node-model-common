@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyPerformanceIndicatorFormula
+        xmlns="urn:com:ericsson:schema:xml:oss:kpi_formula"
+        xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+        oss_common:ns="Router6000-2" oss_common:lifeCycle="CURRENT"
+        oss_common:name="Queue_Utilization_On_Physical_interfaces">
+<oss_common:modelCreationInfo
+            creationDate="2023-08-18" author="Ericsson">
+        <oss_common:designedModel componentId="router6000-2-node-model-common-jar"/>
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>
+    This KPI monitors the queue bandwidth ratio to physical link interface.
+    </oss_common:desc>
+
+    <formula>
+        <reportingObjectType name="port-history"/>
+        <computationInput scope="OBJECTS_FOR_TARGET">
+            <objectType name="port-history" ns="ComTop"/>
+        </computationInput>
+        <computation>
+            <iterate varName="theRO">
+                <iterationSet>
+                    <var varName="INPUT"/>
+                </iterationSet>
+                <output>
+                    <outputInstructions>
+                        <reportingObjectIdentity>
+                            <identityOf varName="theRO"/>
+                        </reportingObjectIdentity>
+                    </outputInstructions>
+                    <multiply>
+                        <literal>100</literal>
+                        <divide>
+                            <divide>
+                            <multiply>
+                                <add>
+                                    <pi on="theRO" piName="queue0_tx_total_bytes"/>
+                                    <pi on="theRO" piName="queue1_tx_total_bytes"/>
+                                    <pi on="theRO" piName="queue2_tx_total_bytes"/>
+                                    <pi on="theRO" piName="queue3_tx_total_bytes"/>
+                                    <pi on="theRO" piName="queue4_tx_total_bytes"/>
+                                    <pi on="theRO" piName="queue5_tx_total_bytes"/>
+                                    <pi on="theRO" piName="queue6_tx_total_bytes"/>
+                                    <pi on="theRO" piName="queue7_tx_total_bytes"/>
+                                </add>
+                                <literal>8</literal>
+                            </multiply>
+                            <multiply>
+                                <literal>900</literal>
+                                <literal>1000</literal>
+                            </multiply>
+                            </divide>
+                            <pi on="theRO" piName="portspeed"/>
+                        </divide>
+                    </multiply>
+                    </output>
+            </iterate>
+        </computation>
+    </formula>
+</KeyPerformanceIndicatorFormula>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *******************************************************************************
+    * COPYRIGHT Ericsson LMI 2021. All rights reserved. * * No part of this document
+    may be reproduced in any form without the * written permission of the copyright
+    owner.The contents of this document * are subject to revision without notice
+    due to continued progress in * methodology, design and manufacturing. Ericsson
+    shall have no liability * for any error or damage of any kind resulting from
+    the use of this document. **************************************************** -->
+<CapabilitySupportDefinition
+    oc:ns="Router6000-2"
+    oc:name="NHM"
+    oc:version="1.0.0"
+    xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common">
+
+    <oc:modelCreationInfo author="Quarks" creationDate="18/08/2023">
+        <oc:designedModel componentId="router6000-2-node-model-common-jar"/>
+    </oc:modelCreationInfo>
+
+    <oc:desc>Router6000-2 capabilities in NHM.</oc:desc>
+
+    <capability name="supportsKpi" value="true"/>
+    <complexCapability name="supportedMoTypes">
+        <value xsi:type="oc:collectionValue">
+            <oc:values>
+                <oc:value xsi:type="oc:stringValue" value="classical-bfd" />
+                <oc:value xsi:type="oc:stringValue" value="global" />
+                <oc:value xsi:type="oc:stringValue" value="context" />
+                <oc:value xsi:type="oc:stringValue" value="dot1q-history" />
+                <oc:value xsi:type="oc:stringValue" value="link-group-history" />
+                <oc:value xsi:type="oc:stringValue" value="cpri-port-history" />
+                <oc:value xsi:type="oc:stringValue" value="micro-bfd" />
+                <oc:value xsi:type="oc:stringValue" value="port-history" />
+                <oc:value xsi:type="oc:stringValue" value="twamp" />
+                <oc:value xsi:type="oc:stringValue" value="ptp" />
+                <oc:value xsi:type="oc:stringValue" value="sfp-channel-history" />
+                <oc:value xsi:type="oc:stringValue" value="sfp-history" />
+                <oc:value xsi:type="oc:stringValue" value="energy-meter" />
+            </oc:values>
+        </value>
+    </complexCapability>
+  
+    <capability name="supportsOpState" value="false"/>
+    <capability name="supportsAdminState" value="false"/>
+
+    <complexCapability name="supportedTechnologyDomains">
+        <value xsi:type="oc:collectionValue">
+            <oc:values>
+                <oc:value xsi:type="oc:stringValue" value="Transport" />
+            </oc:values>
+        </value>
+    </complexCapability>
+
+    <complexCapability name="mosToTechnologyDomainMappings">
+        <value xsi:type="oc:mapValue">
+            <oc:mapEntries>
+                <oc:mapEntry>
+                    <oc:key xsi:type="oc:stringValue" value="Transport"/>
+                    <oc:value xsi:type="oc:collectionValue">
+                        <oc:values>
+                            <oc:value xsi:type="oc:stringValue" value="classical-bfd" />
+                            <oc:value xsi:type="oc:stringValue" value="global" />
+                            <oc:value xsi:type="oc:stringValue" value="context" />
+                            <oc:value xsi:type="oc:stringValue" value="dot1q-history" />
+                            <oc:value xsi:type="oc:stringValue" value="link-group-history" />
+                            <oc:value xsi:type="oc:stringValue" value="cpri-port-history" />
+                            <oc:value xsi:type="oc:stringValue" value="micro-bfd" />
+                            <oc:value xsi:type="oc:stringValue" value="port-history" />
+                            <oc:value xsi:type="oc:stringValue" value="twamp" />
+                            <oc:value xsi:type="oc:stringValue" value="ptp" />
+                            <oc:value xsi:type="oc:stringValue" value="sfp-channel-history" />
+                            <oc:value xsi:type="oc:stringValue" value="sfp-history" />
+                            <oc:value xsi:type="oc:stringValue" value="energy-meter" />
+                        </oc:values>
+                    </oc:value>
+                </oc:mapEntry>
+            </oc:mapEntries>
+        </value>
+    </complexCapability>
+</CapabilitySupportDefinition>
